@@ -65,12 +65,12 @@ FAVICON_BYTES = base64.b64decode('iVBORw0KGgo=')
 
 @app.route('/')
 def index():
-    html_path = os.path.join(os.path.dirname(__file__), 'tutor.html')
+    html_path = os.path.join(os.path.dirname(__file__), 'index.html')
     return ensure_csrf_cookie(send_file(html_path))
 
 @app.route('/tutor')
 def tutor_main():
-    html_path = os.path.join(os.path.dirname(__file__), 'tutor.html')
+    html_path = os.path.join(os.path.dirname(__file__), 'index.html')
     return ensure_csrf_cookie(send_file(html_path))
 
 @app.route('/api/csrf', methods=['GET'])
